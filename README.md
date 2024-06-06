@@ -1,42 +1,49 @@
-# Managemet_sys_PyQt5_openpyxl
 
-## Usage:
+# Management System Software
 
-GUI based application which is built to manage the data of a company on various grounds like Management Systems (Storage, Students, Employees Anything).
+This Management System Software is a Python application built using the Tkinter library for creating a GUI, and it utilizes the openpyxl library for handling Excel files. The software provides a user-friendly interface for managing student information, allowing users to input details such as name, email ID, contact number, and more, and saves this data to an Excel spreadsheet.
 
-Pyinstaller can be used to make an executable file of the application and then can be used on any system without any Python or it's supporting libraries.
+## Features
 
-## Requirements:
+- **User-friendly Interface**: The software provides a simple and intuitive interface for entering and managing student information.
+- **Data Validation**: It includes validation checks for ensuring the correctness of entered data, such as validating email IDs and contact numbers.
+- **Dynamic Comboboxes and Radio Buttons**: The software utilizes comboboxes and radio buttons for selecting options such as state, semester, training session, etc.
+- **Error Handling**: It incorporates error messages to alert users in case of invalid data entry or file access issues.
 
-1. Python 3 or later
-2. openpyxl installed  " pip3 install openpyxl " command on cmd to install library
-3. PyQt5 installed " pip3 install PyQt5 " command on cmd to install library
-4. Some other necessary supporting libraries.
+## Prerequisites
 
-Install  [Python](https://www.python.org/downloads/) . Do install Python3 or later.
+- Python 3.x
+- Tkinter library
+- openpyxl library
 
-if facing difficulty in installing libraries here is the link for the HELP:
+## Installation
 
-1. [openpyxl](https://pypi.python.org/pypi/openpyxl)
-
-2. [PyQt5](https://pypi.python.org/pypi/PyQt5)
-
-> Do change the Image URLs given in the code for a Window Icon and a Background Image for the GUI application.
-
-## Features:
-
-- The excel sheets will be created and saved in C:\Management_sys_excels folder which will be created automatically once this code runs.
-- The Excel will be automatically created if the name mentioned in the GUI, not exists which could be changed in Gui.
-- The Excel would get updated on the same sheet with new entries if excel with the same name already exists and details saved without changing the name of the excel in Gui.
-- The top three rows of details are necessary fields so if not mentioned correct popups will come up accordingly.
-- The validity of all these top three fields would be checked. 
-- With a single click on the Clear button, all the entries would get Initialised.
-- The Sno. and token no. gets updated automatically but if in excel updated with new value will get updated to according to this new value.
-- With a single click on Save Button entries would get saved.
-- If Excel is already open a popup alert will come up as Excel can't be saved once it's open.
-
-## Run:
+1. Clone the repository to your local machine:
 
 ```
-  python Management_sys.py
+git clone https://github.com/yourusername/management-system-software.git
 ```
+
+2. Navigate to the project directory:
+
+```
+cd management-system-software
+```
+
+3. Install the required dependencies:
+
+```
+pip install -r requirements.txt
+```
+
+## Usage
+
+1. Run the application:
+
+```
+python main.py
+```
+
+2. Fill in the necessary student information in the provided fields.
+3. Click the "SAVE" button to save the entered data to an Excel spreadsheet.
+4. Click the "CLEAR" button to reset the form fields.
