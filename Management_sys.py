@@ -12,12 +12,6 @@ class General(tk.Tk):
         self.title('Management System Software')
         self.geometry('1350x750')
 
-        # Background Image
-        bg_image = tk.PhotoImage(file='image2.png') # Replace 'image2.png' with your image file
-        bg_label = tk.Label(self, image=bg_image)
-        bg_label.place(relwidth=1, relheight=1)
-        self.bg_image = bg_image  # Keep a reference to the image
-
         # Form widgets
         header_font = ("Cambria", 13, "bold")
         text_font = ("Times", 11)
@@ -167,7 +161,6 @@ class General(tk.Tk):
                         ]
                         ws.append(data)
                         wb.save(save_file)
-
                         threading.Thread(target=self.savesuccess).start()
                     else:
                         threading.Thread(target=self.errorcontactmsg).start()
@@ -175,8 +168,7 @@ class General(tk.Tk):
                     threading.Thread(target=self.erroremailmsg).start()
             else:
                 threading.Thread(target=self.errornormmsg).start()
-        except Exception as e:
-            print(f"Error: {e}")
+        except PermissionError:
             threading.Thread(target=self.crashingmsg).start()
 
     def clear_clicked(self):
